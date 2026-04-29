@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PotionPanic | Project Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../project-page.css" />
+</head>
+<body>
+  <header class="top container">
+    <a class="back-link" href="../Index.html">← Back to Portfolio</a>
+    <h1>PotionPanic</h1>
+    <p class="subtitle">Null Forge Studio | PC | Co-op time-management crafting game</p>
+    <p class="subtitle"><strong>Role:</strong> Networking Engineer</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Summary</h2>
+      <p>
+        PotionPanic is a chaotic, score-driven apothecary game where players race the clock
+        to fulfill potion requests. The core loop combines gathering ingredients, processing
+        them at specialized stations, brewing recipes, and delivering finished potions for
+        points while avoiding penalties from mistakes or expired orders.
+      </p>
+      <div
+        class="summary-gallery"
+        data-rotating-gallery
+        data-image-base-path="../assets/images/potion-panic/"
+        data-slides='[
+          {"file":"Potion_1.png","alt":"PotionPanic screenshot 1","caption":"Core loop: gather, process, brew, fulfill requests."},
+          {"file":"Potion_2.png","alt":"PotionPanic screenshot 2","caption":"Stations support strategic routing and faster execution."},
+          {"file":"Potion_3.png","alt":"PotionPanic screenshot 3","caption":"Difficulty scales with hazards, requests, and complexity."},
+          {"file":"Potion_4.png","alt":"PotionPanic screenshot 4","caption":"Additional gameplay view from PotionPanic."}
+        ]'
+      >
+        <img src="../assets/images/potion-panic/Potion_1.png" alt="PotionPanic summary image" />
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What I Worked On</h2>
+      <ul>
+        <li>Served as the Networking Engineer and collaborated closely with the full team to build and integrate multiplayer systems.</li>
+        <li>Implemented RPC and replication workflows for gameplay features, UI synchronization, and game pausing behavior.</li>
+        <li>Built session flow systems for creating, finding, joining, and destroying multiplayer sessions.</li>
+        <li>Implemented host settings and invite-to-game functionality to support smoother lobby and match setup.</li>
+        <li>Integrated Steam online services to create listen servers and handle player joins reliably.</li>
+        <li>Built and refined friends list filtering to group players by In-Game, Online, and Offline states.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Key Systems</h2>
+      <div class="tags">
+        <span>Request/Scoring System</span>
+        <span>Station Processing Pipeline</span>
+        <span>Difficulty Scaling</span>
+        <span>Upgrade Economy</span>
+        <span>Replayable Round Structure</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="../project-page.js"></script>
+</body>
+</html>

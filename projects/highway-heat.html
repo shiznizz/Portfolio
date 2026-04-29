@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HighwayHeat | Project Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../project-page.css" />
+</head>
+<body>
+  <header class="top container">
+    <a class="back-link" href="../Index.html">← Back to Portfolio</a>
+    <h1>HighwayHeat</h1>
+    <p class="subtitle">Project details page</p>
+    <p class="subtitle"><strong>Role:</strong> Systems Engineer</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Summary</h2>
+      <p>
+        Highway Heat is an infinite vertical shooter inspired by the arcade classic 1942.
+        Players are dropped into nonstop vehicular combat where the core challenge is to
+        survive as long as possible. As each run continues, enemy intensity increases and
+        players earn upgrades that improve firepower, speed, and survivability, creating a
+        constant sense of progression and pushing players to see how far they can go before
+        being overwhelmed.
+      </p>
+      <div
+        class="summary-gallery"
+        data-rotating-gallery
+        data-image-base-path="../assets/images/highway-heat/"
+        data-slides='[
+          {"file":"Highway_1.png","alt":"HighwayHeat screenshot 1"},
+          {"file":"Highway_2.png","alt":"HighwayHeat screenshot 2"},
+          {"file":"Highway_3.png","alt":"HighwayHeat screenshot 3"}
+        ]'
+      >
+        <img src="../assets/images/highway-heat/Highway_1.png" alt="HighwayHeat screenshot 1" />
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What I Worked On</h2>
+      <ul>
+        <li>Built controller support using GateWare to ensure consistent input handling across gameplay and menus.</li>
+        <li>Integrated IMGUI and used it to implement/debug key UI systems, including an in-game health bar.</li>
+        <li>Designed and maintained standard enemy systems, including AI behavior, spawn logic, attack patterns, formations, and off-screen return handling.</li>
+        <li>Implemented image-loading support with stb_image.h for splash screen assets.</li>
+        <li>Created splash screen animation sequences and integrated them into startup flow.</li>
+        <li>Developed and managed the UI Manager, including pause menu and death menu flows.</li>
+        <li>Implemented pause menu actions (Resume, Main Menu, Quit) and death screen leaderboard display.</li>
+        <li>Built the AudioManager and added volume controls to the pause menu.</li>
+        <li>Improved startup and shutdown performance while addressing stability concerns.</li>
+        <li>Performed memory leak testing and fixed identified memory issues.</li>
+        <li>Used NDC-space bounds to implement invisible gameplay walls for both players and enemies.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Tech Stack</h2>
+      <div class="tags">
+        <span>Custom Engine</span>
+        <span>Vulkan</span>
+        <span>GateWare</span>
+        <span>IMGUI</span>
+        <span>ENTT</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="../project-page.js"></script>
+</body>
+</html>

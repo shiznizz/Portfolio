@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operation StarFall | Project Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../project-page.css" />
+</head>
+<body>
+  <header class="top container">
+    <a class="back-link" href="../Index.html">← Back to Portfolio</a>
+    <h1>Operation StarFall</h1>
+    <p class="subtitle">Project details page</p>
+    <p class="subtitle"><strong>Role:</strong> Gameplay Engineer</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Summary</h2>
+      <p>
+        Operation StarFall is a fast-paced sci-fi FPS set on an orbital station under attack.
+        Players combine fluid traversal and combat to complete layered objectives, including
+        surviving enemy waves, collecting keycard fragments, defending critical systems, and
+        pushing toward a final control-room boss fight to prevent station destruction.
+      </p>
+      <div
+        class="summary-gallery"
+        data-rotating-gallery
+        data-image-base-path="../assets/images/operation-starfall/"
+        data-slides='[
+          {"file":"OeprationStarfallScreenshot1.png","alt":"Operation StarFall screenshot 1"},
+          {"file":"OeprationStarfallScreenshot2.png","alt":"Operation StarFall screenshot 2"},
+          {"file":"OeprationStarfallScreenshot3.png","alt":"Operation StarFall screenshot 3"},
+          {"file":"OeprationStarfallScreenshot4.png","alt":"Operation StarFall screenshot 4"},
+          {"file":"OeprationStarfallScreenshot5.png","alt":"Operation StarFall screenshot 5"},
+          {"file":"OeprationStarfallScreenshot6.png","alt":"Operation StarFall screenshot 6"},
+          {"file":"OeprationStarfallScreenshot7.png","alt":"Operation StarFall screenshot 7"},
+          {"file":"OeprationStarfallScreenshot8.png","alt":"Operation StarFall screenshot 8"},
+          {"file":"OeprationStarfallScreenshot9.png","alt":"Operation StarFall screenshot 9"},
+          {"file":"OeprationStarfallScreenshot10.png","alt":"Operation StarFall screenshot 10"},
+          {"file":"OeprationStarfallScreenshot11.png","alt":"Operation StarFall screenshot 11"}
+        ]'
+      >
+        <img src="../assets/images/operation-starfall/OeprationStarfallScreenshot1.png" alt="Operation StarFall screenshot 1" />
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What I Worked On</h2>
+      <ul>
+        <li>Assisted with foundational player movement systems and general gameplay responsiveness.</li>
+        <li>Implemented a grapple hook system using gravity-based swinging mechanics.</li>
+        <li>Built inventory workflows, including base item definitions with ScriptableObjects.</li>
+        <li>Implemented item pickup and drop interactions tied to the inventory system.</li>
+        <li>Developed persistence for character, inventory, and weapon data across level transitions.</li>
+        <li>Implemented save/load systems using JSON files for game data persistence.</li>
+        <li>Managed web build setup and support tasks for playable deployment builds.</li>
+        <li>Handled general bug fixes across multiple gameplay and system areas.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Key Systems</h2>
+      <div class="tags">
+        <span>Fluid Movement Mechanics</span>
+        <span>Multi-Objective Mission Flow</span>
+        <span>Enemy Wave Encounters</span>
+        <span>Keycard Progression Gates</span>
+        <span>Boss Phase Mechanics</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="../project-page.js"></script>
+</body>
+</html>

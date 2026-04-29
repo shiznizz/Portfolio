@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Lanning | Game Development Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-content">
+      <h1>Justin Lanning</h1>
+      <p class="tagline">
+        Game Developer | Gameplay, Systems &amp; Networking | QA Experience
+      </p>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="card about" id="about">
+      <h2>About Me</h2>
+      <p>
+        I&rsquo;m a game developer focused on building and refining gameplay and networking
+        systems. I primarily work in Unreal Engine 5 using C++, with Blueprints, emphasizing
+        scalability, performance, and clean system design. I also have experience with Unity,
+        C#, and QA testing.
+      </p>
+      <p>
+        With a background in QA, I bring a detail-oriented mindset and a strong focus on
+        debugging, stability, and edge case handling. I prioritize delivering smooth,
+        high-quality player experiences, particularly in gameplay and multiplayer systems.
+      </p>
+    </section>
+
+    <section class="card projects" id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+
+    <section class="card skills" id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid skills-grid--quad">
+        <div class="skill-group">
+          <h3>Game Development:</h3>
+          <div class="skill-tags">
+            <span>Gameplay Systems</span>
+            <span>Networking Systems</span>
+            <span>AI Systems</span>
+            <span>C++</span>
+            <span>C#</span>
+            <span>Unreal Engine 5</span>
+            <span>Blueprints</span>
+            <span>Unity</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Networking:</h3>
+          <div class="skill-tags">
+            <span>Unreal Engine Networking Subsystems</span>
+            <span>Unreal Engine Steam Subsystems</span>
+            <span>Session Lifecycles</span>
+            <span>RPC&rsquo;s</span>
+            <span>Replication</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Workflows:</h3>
+          <div class="skill-tags">
+            <span>Agile Development</span>
+            <span>Scrum Development</span>
+            <span>Git Hub</span>
+            <span>Perforce</span>
+            <span>Unreal Engine 5</span>
+            <span>Unity</span>
+            <span>SteamWorks</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>QA:</h3>
+          <div class="skill-tags">
+            <span>White Box Testing</span>
+            <span>Grey Box Testing</span>
+            <span>Black Box Testing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card project-showcase" id="project-showcase" aria-labelledby="showcase-heading">
+      <h2 id="showcase-heading">Project gallery</h2>
+      <h3 class="showcase-project-title" id="showcase-project-title">PotionPanic</h3>
+      <div class="showcase-viewport">
+        <button type="button" class="showcase-nav showcase-nav-prev" id="showcase-prev" aria-label="Previous screenshot">
+          ←
+        </button>
+        <div class="showcase-frame">
+          <img id="showcase-image" src="" alt="" width="1200" height="675" decoding="async" />
+        </div>
+        <button type="button" class="showcase-nav showcase-nav-next" id="showcase-next" aria-label="Next screenshot">
+          →
+        </button>
+      </div>
+      <div class="showcase-thumbs" id="showcase-thumbs" role="tablist" aria-label="Project screenshots"></div>
+    </section>
+
+    <section class="card contact" id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out about collaborations, freelance work, or full-time roles.</p>
+      <p><strong>Phone:</strong> 832-477-5274</p>
+      <p>
+        <strong>Email:</strong>
+        <a class="contact-email" href="mailto:Justin.Lanning40@gmail.com">Justin.Lanning40@Gmail.com</a>
+      </p>
+      <div class="contact-actions">
+        <a class="cta-btn cta-outline" href="https://www.linkedin.com/in/justin-lanning-899986189/" target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>
+        <a class="cta-btn cta-outline" href="assets/resume/JustinResume%20Overall.pdf" target="_blank" rel="noreferrer">
+          View Resume
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>Built by Justin Lanning</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

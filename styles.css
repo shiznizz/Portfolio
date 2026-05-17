@@ -324,7 +324,7 @@ h2 {
   padding-right: calc(0.95rem + 12.5px);
 }
 
-.project-itch-embed {
+.project-store-embed {
   width: 100%;
   max-width: 552px;
   margin-top: 0;
@@ -332,13 +332,74 @@ h2 {
   flex-shrink: 0;
 }
 
-.project-itch-embed iframe {
+.project-store-embed iframe {
   display: block;
   width: 100%;
   max-width: 552px;
-  height: 167px;
   border: 0;
   border-radius: 8px;
+}
+
+.project-store-promo {
+  width: 100%;
+  max-width: 552px;
+  align-self: stretch;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-store-promo-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 167px;
+  background: #1a1428;
+  text-decoration: none;
+}
+
+.project-store-promo-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-store-promo-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 10px;
+  background: #000;
+  border-top: 1px solid #5a6fa8;
+  pointer-events: none;
+}
+
+.project-store-promo-btn {
+  display: inline-block;
+  padding: 9px 12px;
+  border: 1px solid #5a6fa8;
+  border-radius: 3px;
+  background: #7eb8ff;
+  color: #222;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.project-store-promo-link:hover .project-store-promo-btn,
+.project-store-promo-link:focus-visible .project-store-promo-btn {
+  background: #92c4ff;
 }
 
 .project-card h3 {

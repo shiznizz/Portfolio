@@ -6,10 +6,11 @@ const projects = [
     summary:
       "A chaotic co-op apothecary game where players gather, process, and brew ingredients to fulfill timed potion requests for score.",
     page: "projects/potion-panic.html",
-    itchEmbed: {
-      src: "https://itch.io/embed/4345652?bg_color=000000&fg_color=ffffff&link_color=7eb8ff&border_color=5a6fa8",
-      fallbackUrl: "https://null-forge-studio.itch.io/potionpanic",
-      fallbackLabel: "Potion Panic on itch.io"
+    steamPromo: {
+      imageSrc: "assets/images/potion-panic/PotionPanic-hero.png",
+      imageAlt: "Potion Panic promotional artwork",
+      url: "https://store.steampowered.com/app/4533650/PotionPanic/",
+      buttonLabel: "View on Steam"
     }
   },
   {
@@ -18,7 +19,7 @@ const projects = [
     role: "Gameplay Engineer",
     summary: "A fast-paced sci-fi FPS where players use fluid traversal and combat to survive waves, complete objectives, and stop a station-wide catastrophe.",
     page: "projects/operation-starfall.html",
-    itchEmbed: {
+    storeEmbed: {
       src: "https://itch.io/embed/3421201?bg_color=000000&fg_color=ffffff&link_color=7eb8ff&border_color=5a6fa8",
       fallbackUrl: "https://shiznizz.itch.io/operation-starfall",
       fallbackLabel: "Operation Starfall by ShizNizz"
@@ -31,7 +32,7 @@ const projects = [
     summary:
       "An infinite vertical shooter inspired by 1942, focused on survival, escalating enemy pressure, and run-based progression through upgrades.",
     page: "projects/highway-heat.html",
-    itchEmbed: {
+    storeEmbed: {
       src: "https://itch.io/embed/4526796?bg_color=000000&fg_color=ffffff&link_color=7eb8ff&border_color=5a6fa8",
       fallbackUrl: "https://shiznizz.itch.io/highwayheat",
       fallbackLabel: "HighwayHeat by ShizNizz"
@@ -41,23 +42,50 @@ const projects = [
 
 const grid = document.getElementById("project-grid");
 
+function renderProjectStoreBlock(project) {
+  if (project.steamPromo != null) {
+    const promo = project.steamPromo;
+    return `<div class="project-store-promo">
+      <a
+        class="project-store-promo-link"
+        href="${promo.url}"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="${promo.buttonLabel}"
+      >
+        <img src="${promo.imageSrc}" alt="${promo.imageAlt}" width="552" height="167" loading="lazy" />
+        <span class="project-store-promo-footer">
+          <span class="project-store-promo-btn">${promo.buttonLabel}</span>
+        </span>
+      </a>
+    </div>`;
+  }
+
+  if (project.storeEmbed == null) {
+    return "";
+  }
+
+  const embed = project.storeEmbed;
+  const width = embed.width ?? 552;
+  const height = embed.height ?? 167;
+  const platform = embed.platform ?? "itch.io";
+  return `<div class="project-store-embed">
+      <iframe
+        title="${project.title} on ${platform}"
+        frameborder="0"
+        src="${embed.src}"
+        width="${width}"
+        height="${height}"
+        loading="lazy"
+      ><a href="${embed.fallbackUrl}">${embed.fallbackLabel}</a></iframe>
+    </div>`;
+}
+
 function renderProjects() {
   grid.innerHTML = "";
 
   projects.forEach((project) => {
-    const itchBlock =
-      project.itchEmbed != null
-        ? `<div class="project-itch-embed">
-      <iframe
-        title="${project.title} on itch.io"
-        frameborder="0"
-        src="${project.itchEmbed.src}"
-        width="552"
-        height="167"
-        loading="lazy"
-      ><a href="${project.itchEmbed.fallbackUrl}">${project.itchEmbed.fallbackLabel}</a></iframe>
-    </div>`
-        : "";
+    const embedBlock = renderProjectStoreBlock(project);
 
     const card = document.createElement("article");
     card.className = "project-card";
@@ -67,7 +95,7 @@ function renderProjects() {
         ${project.role ? `<p><strong>Role:</strong> ${project.role}</p>` : ""}
         <p>${project.summary}</p>
       </div>
-      ${itchBlock}
+      ${embedBlock}
       <a class="cta-btn cta-outline project-card-btn" href="${project.page}">View project</a>
     `;
     grid.appendChild(card);
